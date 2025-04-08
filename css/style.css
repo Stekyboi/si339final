@@ -1,0 +1,322 @@
+/* Base styling for the navigation buttons */
+html{
+    background-color: #ECECEC;
+}
+
+body{
+    width: 60vw;
+    justify-self: center;
+}
+
+.nav-button {
+    position: fixed; /* Ensures the buttons stay in place on scroll */
+    width: 10vw;     /* Responsive width */
+    height: 10vw;    /* Responsive height */
+    background-color: transparent;
+    z-index: 100;
+    color: #fff;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+
+  .nav-button:hover {
+    transform: scale(1.3);
+    transition-duration: 150ms;
+    background-color: #838E83;
+  }
+  
+  /* Top Left Triangle */
+  .top-left {
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+  
+  /* Top Right Triangle */
+  .top-right {
+    top: 0;
+    right: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+  }
+  
+  /* Bottom Left Triangle */
+  .bottom-left {
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(0 100%, 0 0, 100% 100%);
+  }
+  
+  /* Bottom Right Triangle */
+  .bottom-right {
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(100% 100%, 100% 0, 0 100%);
+  }
+
+  .center {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  .greeting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 30px;
+  }
+
+  h1 {
+    font-size: 600%;
+  }
+
+  h2 {
+    font-size: 300%;
+  }
+
+  h3 {
+    font-size: 200%;
+  }
+
+  .pagetitle {
+    width: 100%;
+    margin: 0 auto;
+    /* This will force the ratio to be 1440:300 (i.e. 4.8:1) */
+    aspect-ratio: 1440 / 300;
+    background-color: #ECECEC; /* Placeholder background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gap {
+    height: 500px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Leave blanks for the background images; fill in the URLs as needed. */
+  .gap.gap1 {
+    background-image: url('../images/3d/Backpack/gapcover1.png'); /* Insert first gap background image here */
+    background-position: center -500px;
+  }
+  .gap.gap2 {
+    background-image: url('../images/fursuit/Luckii fursuit/IMG_2645.jpg'); /* Insert second gap background image here */
+  }
+  .gap.gap3 {
+    background-image: url('../images/etsy/photo_10_2024-08-12_14-25-40.jpg'); /* Insert third gap background image here */
+    background-size: 60%;
+  }
+
+  section.sec1,
+  section.sec2,
+  section.sec3 {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%; 
+  box-sizing: border-box;
+  background-color: #ECECEC;
+  position: relative;
+}
+
+section h2.sec1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    /* Use an inline SVG as the background image. Adjust the text, font-size, color, and rotation as desired */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Ctext x='0' y='120' font-family='Arial' font-size='30' fill='rgba(131,142,131,0.5)' transform='rotate(-45 100 100)'%3E3D MODELING%3C/text%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    /* Optionally, you can also center the text content of the h2 if needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent; 
+  }
+
+  section h2.sec2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    /* Use an inline SVG as the background image. Adjust the text, font-size, color, and rotation as desired */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Ctext x='0' y='120' font-family='Arial' font-size='30' fill='rgba(131,142,131,0.5)' transform='rotate(-45 100 100)'%3EFURSUITS%3C/text%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    /* Optionally, you can also center the text content of the h2 if needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent; 
+  }
+  
+  section h2.sec3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    /* Use an inline SVG as the background image. Adjust the text, font-size, color, and rotation as desired */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Ctext x='0' y='120' font-family='Arial' font-size='30' fill='rgba(131,142,131,0.5)' transform='rotate(-45 100 100)'%3EETSY STORE%3C/text%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    /* Optionally, you can also center the text content of the h2 if needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent; 
+  }
+
+.mainimg {
+    flex: 1;
+    /* margin-right: 2%; */
+    max-width: 40%;  /* Approximately half the section */
+    height: 80%;
+    border-radius: 2%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.imagescontainer {
+    flex: 1;
+    max-width: 50%;
+    /* max-height: 100%; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    box-sizing: border-box;
+    padding: 1%;
+    position: relative;
+    z-index: 1;
+}
+
+.imagescontainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 7/4;
+    border-radius: 5%;
+}
+
+/* About Page */
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.bio {
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
+  padding: 10%;
+}
+
+.biowords {
+  display: block;
+  width: 50%;
+  font-size: 200%;
+}
+
+.biowords p{
+  line-height: 150%;
+}
+
+.bioimage img{
+  border-radius: 3%;
+}
+
+.biosec {
+  padding: 5%;
+  border-top: black 5px dotted;
+}
+
+.bioseclast {
+  padding: 5%;
+  border-top: black 5px dotted;
+  border-bottom: black 5px dotted;
+}
+
+.biosec h2 {
+  margin: 2% 0% 2% 0%;
+}
+
+.biosec li, p, h3 {
+  line-height: 150%;
+}
+
+/* form */
+.form{
+  margin: 5%;
+  justify-items: center;
+}
+
+.contact-form {
+  background: #fff;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #555;
+}
