@@ -8,18 +8,18 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- You can also include any external fonts or icon libraries here -->
 </head>
-<body>
+<body class="fade-in">
     <header>
         <!-- <div class="pagetitle">
             <h1>Projects</h1> -->
             <!-- Navigation Triangles -->
-            <button class="nav-button top-left" onclick="location.href='index.html'"><img src="images/home.png" alt="home navigation"></button>
-            <button class="nav-button top-right" onclick="location.href='about.html'"><img src="images/information.png" alt="about navigation"></button>
-            <button class="nav-button bottom-left" onclick="location.href='projects.html'" aria-current="page"><img src="images/layers.png" alt="projects navigation"></button>
-            <button class="nav-button bottom-right" onclick="location.href='page4.html'"><img src="images/user.png" alt="contact navigation"></button>
+            <button class="nav-button top-left back-button" tabindex='0'><img src="images/back.png" alt="back navigation"></button>
+            <button class="nav-button top-right" tabindex='0' data-target='about.html'><img src="images/information.png" alt="about navigation"></button>
+            <button class="nav-button bottom-left" tabindex='0' data-target='projects.html' aria-current="page"><img src="images/layers.png" alt="projects navigation"></button>
+            <button class="nav-button bottom-right" tabindex='0' data-target='index.html'><img src="images/home.png" alt="home navigation"></button>
         </div>
     </header>
-    <main>
+    <main id="swup" class="transition-fade">
         <div class="gap gap1"></div>
         <section class="sec1">
             <h2 class="sec1">3D Model Work</h2>
@@ -54,8 +54,12 @@
             </div>
         </section>
     </main>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/swup@4"></script>
+    <script src="js/transition.js"></script>
 </body>
-<footer>
 
+<footer>
+    <p>&copy; <span id="year"></span> Dante Garetto</p>
 </footer>
 </html>

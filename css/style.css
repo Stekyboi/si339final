@@ -25,6 +25,12 @@ body{
     transition-duration: 150ms;
     background-color: #838E83;
   }
+
+  .nav-button:focus {
+    transform: scale(1.3);
+    transition-duration: 150ms;
+    background-color: #838E83;
+  }
   
   /* Top Left Triangle */
   .top-left {
@@ -101,7 +107,7 @@ body{
   /* Leave blanks for the background images; fill in the URLs as needed. */
   .gap.gap1 {
     background-image: url('../images/3d/Backpack/gapcover1.png'); /* Insert first gap background image here */
-    background-position: center -500px;
+    background-position: center -300px;
   }
   .gap.gap2 {
     background-image: url('../images/fursuit/Luckii fursuit/IMG_2645.jpg'); /* Insert second gap background image here */
@@ -190,6 +196,12 @@ section h2.sec1 {
     object-fit: cover;
     position: relative;
     z-index: 1;
+    transition: transform 0.7s;
+    transform: scale(1) rotate(0deg);
+}
+
+.mainimg:hover{
+  transform: scale(1.2) rotate(-5deg);
 }
 
 .imagescontainer {
@@ -212,6 +224,8 @@ section h2.sec1 {
     aspect-ratio: 7/4;
     border-radius: 5%;
 }
+
+
 
 /* About Page */
 
@@ -253,7 +267,11 @@ main {
 }
 
 .biosec h2 {
-  margin: 2% 0% 2% 0%;
+  margin: 2% 0% 0% 0%;
+}
+
+.biosec h3{
+  margin: 0% 0% 2% 0%;
 }
 
 .biosec li, p, h3 {
@@ -267,12 +285,12 @@ main {
 }
 
 .contact-form {
-  background: #fff;
+  background: #ECECEC;
   padding: 2rem;
-  max-width: 500px;
+  max-width: 1000px;
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form h2 {
@@ -308,8 +326,8 @@ main {
 .contact-form button {
   width: 100%;
   padding: 0.75rem;
-  background: #333;
-  color: #fff;
+  color: white;
+  background-color: #838E83;
   border: none;
   border-radius: 4px;
   font-size: 1rem;
@@ -318,5 +336,57 @@ main {
 }
 
 .contact-form button:hover {
-  background: #555;
+  /* background: #555; */
+  transform: scale(1.01);
+  transition-duration: .5s;
+  color: white;
+  background-color: black;
+}
+
+/* PAGE TRANSITIONS */
+.transition-overlay {
+  position: fixed;
+  background: #838E83;
+  border-radius: 50%;
+  z-index: 9999;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  transform: scale(0);
+  opacity: 1;
+  transition: transform .7s ease-in-out;
+}
+
+.transition-overlay.expand {
+  transform: scale(250);
+}
+
+body.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .transition-overlay {
+    display: none !important;
+  }
+
+  .mainimg,
+  .imagescontainer img,
+  .nav-button:hover {
+    transform: none !important;
+  }
 }
