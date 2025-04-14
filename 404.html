@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dante Garetto</title>
+  <title>Error: 404 Page Not Found</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   
   <!-- You can also include any external fonts or icon libraries here -->
 </head>
-<body class="fade-in home">
+<body class="fade-in error">
   
 
   <!-- Landing Page Container -->
@@ -18,13 +18,14 @@
     <button class="nav-button top-left back-button" tabindex='0'><img src="images/back.png" alt="back navigation"></button>
     <button class="nav-button top-right" tabindex='0' data-target='about.html'><img src="images/information.png" alt="about navigation"></button>
     <button class="nav-button bottom-left" tabindex='0' data-target='projects.html'><img src="images/layers.png" alt="projects navigation"></button>
-    <button class="nav-button bottom-right" tabindex='0' data-target='index.html' aria-current="page"><img src="images/home.png" alt="home navigation"></button>
+    <button class="nav-button bottom-right" tabindex='0' data-target='index.html'><img src="images/home.png" alt="home navigation"></button>
   </header>
   <main id="swup" class="transition-fade">
     <div class="center">
       <div class="greeting">
-          <h1>Hello,</h1>
-          <h2>Feel free to take a look around!</h2>
+          <h1>Oops!</h1>
+          <h2>Looks like you've wandered into the wrong place...</h2>
+          <button class='button' tabindex="0" data-target="index.html">Let's get you back on track</button>
       </div>
     </div>
   </main>
@@ -36,7 +37,5 @@
   <script src="https://unpkg.com/swup@4"></script>
   <script src="js/transition.js"></script>
 </body>
-<footer>
-  <p>&copy; <span id="year"></span> Dante Garetto</p>
-</footer>
+
 </html>

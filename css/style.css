@@ -72,6 +72,62 @@ body{
     justify-content: center;
     height: 100vh;
     gap: 30px;
+    text-align: center;
+  }
+
+  .home {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 300 300'%3E%3Ctext x='0' y='120' font-family='Arial' font-size='30' fill='rgba(131,142,131,0.5)' transform='rotate(-30 100 100)'%3EHi%3C/text%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    min-height: 90vh;
+    min-width: 99vw;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .about {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 300 300'%3E%3Ctext x='0' y='120' font-family='Arial' font-size='20' fill='rgba(131,142,131,0.5)' transform='rotate(-30 100 100)'%3EHi%3C/text%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .error{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 300 300'%3E%3Ctext x='0' y='120' font-family='Arial' font-size='30' fill='rgba(131,142,131,0.5)' transform='rotate(-30 100 100)'%3E404%3C/text%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    min-height: 90vh;
+    min-width: 99vw;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .greeting button{
+    width: 40%;
+    height: 10%;
+    padding: 0.75rem;
+    color: white;
+    background-color: #677a67;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background 0.3s ease, scale 1s ease;
+  }
+
+  .greeting button:hover {
+    /* background: #555; */
+    scale: 1.2;
+    transition-duration: 1s;
+    color: white;
+    background-color: black;
+  }
+
+  .greeting button:focus{
+    scale: 1.2;
+    transition-duration: 1s;
+    color: white;
+    background-color: black;
   }
 
   h1 {
@@ -200,6 +256,7 @@ section h2.sec1 {
     transform: scale(1) rotate(0deg);
 }
 
+
 .mainimg:hover{
   transform: scale(1.2) rotate(-5deg);
 }
@@ -253,17 +310,31 @@ main {
 
 .bioimage img{
   border-radius: 3%;
+  transition: transform 0.7s;
+  transform: scale(1) rotate(0deg);
+}
+
+.bioimage img:hover{
+  transform: scale(1.2) rotate(5deg);
 }
 
 .biosec {
   padding: 5%;
-  border-top: black 5px dotted;
+  /* border-top: black 5px dotted; */
+  background: #ECECEC;
+  padding: 2rem;
+  margin: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  align-self: center;
 }
 
 .bioseclast {
   padding: 5%;
-  border-top: black 5px dotted;
-  border-bottom: black 5px dotted;
+  /* border-top: black 5px dotted;
+  border-bottom: black 5px dotted; */
 }
 
 .biosec h2 {
@@ -327,7 +398,7 @@ main {
   width: 100%;
   padding: 0.75rem;
   color: white;
-  background-color: #838E83;
+  background-color: #677a67;
   border: none;
   border-radius: 4px;
   font-size: 1rem;
@@ -336,6 +407,14 @@ main {
 }
 
 .contact-form button:hover {
+  /* background: #555; */
+  transform: scale(1.01);
+  transition-duration: .5s;
+  color: white;
+  background-color: black;
+}
+
+.contact-form button:focus {
   /* background: #555; */
   transform: scale(1.01);
   transition-duration: .5s;
@@ -358,7 +437,7 @@ main {
 }
 
 .transition-overlay.expand {
-  transform: scale(250);
+  transform: scale(300);
 }
 
 body.fade-in {

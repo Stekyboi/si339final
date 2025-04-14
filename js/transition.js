@@ -42,3 +42,17 @@ document.querySelectorAll('.nav-button').forEach(button => {
     }
   });
 });
+
+document.querySelectorAll('.button').forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    handleNavigation(button);
+  });
+
+  button.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+      e.preventDefault();
+      handleNavigation(button);
+    }
+  });
+});
