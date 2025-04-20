@@ -10,8 +10,8 @@ body{
 
 .nav-button {
     position: fixed; /* Ensures the buttons stay in place on scroll */
-    width: 15vw;     /* Responsive width */
-    height: 15vw;    /* Responsive height */
+    width: 17vw;     /* Responsive width */
+    height: 17vw;    /* Responsive height */
     background-color: #ECECEC;
     z-index: 100;
     color: #fff;
